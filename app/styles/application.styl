@@ -1,8 +1,8 @@
 /**
  * Primary Application Stylesheet
- * 
+ *
  * @langversion Stylus
- * 
+ *
  * @author Christopher Pappas
  * @since  Month 00, 2012
  */
@@ -10,12 +10,86 @@
 // nib is a powerful lib for stylus that provides cross-browser css3 mixins.
 // No more vendor prefixes. http://visionmedia.github.com/nib/
 @import 'nib'
+@import 'grid'
+
+// variables
+$base-font-size   = 18px
+$base-line-height = 20px
+$base-font-family = 'SeravekLight', HelveticaNeue-Medium, Arial, Helvetica, sans-serif
 
 // Apply a natural box layout model to all elements.
 // http://paulirish.com/2012/box-sizing-border-box-ftw/
 *
   box-sizing: border-box
 
-#home-view
-  width: 1003px
-  margin: 0 auto
+html
+  -webkit-text-size-adjust: 100%
+  font-size: $base-font-size
+  line-height: $base-line-height
+  font-family: $base-font-family
+  color: #4c4b54
+
+body
+  background: #dee3e9
+
+::selection
+  background: #6e64c5
+  color: #fff
+
+::-moz-selection
+  background: #6e64c5
+  color: #fff
+
+::-webkit-selection
+  background: #6e64c5
+  color: #fff
+
+a
+  text-decoration: none
+  color: inherit
+  transition: color 0.15s ease-in-out
+  &:visited
+    color: inherit
+  &:active
+    color: #6e64c5
+  &:hover
+    color: #6e64c5
+
+// Text
+p
+  margin: 0
+  font-size: $base-font-size
+  line-height: $base-line-height * 1.25
+
+blockquote
+  color: #717179
+  font-size: 14px
+  padding-left: 10px
+  border-left: 7px solid rgba(#6e64c5, 0.15)
+  margin: 5px 0px
+  font-family: 'SeravekLightItalic', HelveticaNeue-Medium, Arial, Helvetica, sans-serif
+  font-style: italic
+  line-height: $base-line-height
+  margin-bottom: 15px
+
+h1, h2, h3, h4
+  font-family: 'SeravekMedium', HelveticaNeue-Medium, Arial, Helvetica, sans-serif
+  margin: 0px
+  padding: 0px
+  line-height: $base-line-height * 2
+
+h1
+  font-size: 24px
+  margin-bottom: 12px
+
+h2
+  font-size: $base-font-size
+
+// Lists
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+  line-height: $base-line-height * 1.35
+
+// Structure

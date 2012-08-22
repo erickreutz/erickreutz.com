@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'SeravekMedium';
+  src: url('/fonts/SeravekWebBasicMedium.eot');
+  src: url('/fonts/SeravekWebBasicMedium.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SeravekLight';
+  src: url('/fonts/SeravekWebBasicLight.eot');
+  src: url('/fonts/SeravekWebBasicLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SeravekLightItalic';
+  src: url('/fonts/SeravekWebBasicLightItalic.eot');
+  src: url('/fonts/SeravekWebBasicLightItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
