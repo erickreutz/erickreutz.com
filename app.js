@@ -22,8 +22,8 @@ function bootApplication(app) {
   app.use(gzippo.staticGzip(path + '/public'));
 
   app.use(function(req, res, next) {
-    if (req.headers.host.match(/usefabric.com/) && req.headers.host.slice(0, 3) != 'www') {
-        res.redirect('http://www.' + req.headers.host + req.url, 301);
+    if (req.headers.host.match(/erickreutz.com/) && req.headers.host.slice(0, 3) === 'www') {
+        res.redirect('http://erickreutz.com' + req.url, 301);
     } else {
       next();
     }
