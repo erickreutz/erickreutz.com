@@ -18,8 +18,7 @@ exports.config =
       order:
         before: [
           'vendor/styles/normalize.css',
-          'app/styles/fonts.css',
-          'app/styles/grid.styl'
+          'app/styles/fonts.css'
         ]
         after: ['vendor/styles/helpers.css']
 
