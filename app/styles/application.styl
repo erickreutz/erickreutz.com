@@ -12,12 +12,10 @@
 @import 'nib'
 
 // variables
-$base-font-size   = 18px
-$base-line-height = 20px
-$base-font-family = 'SeravekLight', HelveticaNeue-Medium, Arial, Helvetica, sans-serif
+$base-font-size   = 28px
+$base-line-height = 32px
+$base-font-family = "Reader Bold", Arial, 'Helvetica Neue', Helvetica, sans-serif
 
-// Apply a natural box layout model to all elements.
-// http://paulirish.com/2012/box-sizing-border-box-ftw/
 *
   box-sizing: border-box
 
@@ -26,94 +24,42 @@ html
   font-size: $base-font-size
   line-height: $base-line-height
   font-family: $base-font-family
-  color: #4c4b54
+  font-weight: bold
+  -webkit-font-smoothing: antialiased
+  color: rgba(255, 255, 255, 0.90)
+  background: #709a91
 
 body
-  background: #dee3e9
-  max-width: 670px
-  padding: 65px
+  padding: 5% 7%
+  max-width: 768px
 
-
-
-::selection
-  background: rgba(#6e64c5, 0.15)
-  color: #4c4b54
-
-::-moz-selection
-  background: rgba(#6e64c5, 0.15)
-  color: #4c4b54
-
-::-webkit-selection
-  background: rgba(#6e64c5, 0.15)
-  color: #4c4b54
-
-a
-  text-decoration: none
-  color: inherit
-  transition: color 0.15s ease-in-out
-  &:visited
-    color: inherit
-  &:active
-    color: #6e64c5
-  &:hover
-    color: #6e64c5
-
-.clearfix
+.group
   clearfix()
 
-.row
-  max-width: 475px
-
-  .column:first-child
-    float: left
-
-  .column:last-child
-    float: left
-    margin-left: 75px
-
-// Text
 p
-  margin: 0
-  font-size: $base-font-size
-  line-height: $base-line-height * 1.25
-
-blockquote
-  color: #717179
-  font-size: $base-font-size * 0.75
-  padding-left: 10px
-  border-left: 7px solid rgba(#6e64c5, 0.15)
-  margin: 5px 0px
-  font-family: 'SeravekLightItalic', HelveticaNeue-Medium, Arial, Helvetica, sans-serif
-  font-style: italic
-  line-height: $base-line-height
-  margin-bottom: 15px
-
-h1, h2, h3, h4
-  font-family: 'SeravekMedium', HelveticaNeue-Medium, Arial, Helvetica, sans-serif
-  margin: 0px
-  padding: 0px
-  line-height: $base-line-height * 2
-
-h1
-  font-size: 24px
-  margin-bottom: 12px
+  line-height: $base-line-height * 1.35
+  margin-bottom: 30px
+  margin-top: 0px
 
 h2
   font-size: $base-font-size
-  margin-top: 20px
+  font-weight: normal
+  border-left: 4px solid rgba(255, 255, 255, 0.20)
+  display: inline-block
+  margin-bottom: 0px
+  padding-left: 10px
+  color: rgba(255, 255, 255, 0.90)
 
-// Lists
+a
+  color: rgba(255, 255, 255, 0.90)
+  text-decoration: none
+  font-size: 14px
+
 ul
-  margin: 0
-  padding: 0
+  padding-left: 0px
   list-style: none
-  line-height: $base-line-height * 1.35
+  margin-bottom: $base-line-height * 1.5
 
-@media screen and (min-width : 320px) and (max-width : 670px)
-  body
-    padding: 25px
-  .row
-    .column
-      float: none !important
-    .column:last-child
-      margin-left: 0px
+  li
+    margin-right: 7px
+    display: inline-block
